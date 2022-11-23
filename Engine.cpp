@@ -9,7 +9,6 @@ void ActualSubscriber::update(Publisher *who, void *what)
 {
 	const char *message = static_cast<char *>(what);
 	// std::cout << message << std::endl;
-
 	this->engine->request(message);
 }
 
@@ -107,28 +106,3 @@ DEF_ENTER(Engine, PauseState)
 }
 
 DEF_EXIT(Engine, PauseState) {}
-
-// void Engine::call_start()
-// {
-// 	this->request(STATE_START);
-// }
-
-// void Engine::call_review()
-// {
-// 	this->request(STATE_REVIEW);
-// }
-
-// void Engine::call_quiz()
-// {
-// 	this->request(STATE_QUIZ);
-// }
-
-// void Engine::call_game_over()
-// {
-// 	this->request(STATE_GAME_OVER);
-// }
-
-// void Engine::call_pause()
-// {
-// 	this->request(STATE_PAUSE);
-// }
